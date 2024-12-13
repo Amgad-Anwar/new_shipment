@@ -245,9 +245,11 @@ class MissionController extends Controller
 
     public function getAmountModel(Request $request , $mission_id)
     {
+        
         $mission  = Mission::find($mission_id);
-        $shipment = Shipment::find($request->shipment_id);
+        $shipment = Shipment::find($mission->shipment_mission->first()->shipment_id );  //$request->shipment_id
         $adminTheme = env('ADMIN_THEME', 'adminLte');
+        //dd( $request , $shipment , $mission   );//amgad
         return view('cargo::'.$adminTheme.'.pages.missions.ajaxed-confirm-amount',compact(['mission','shipment']));
     }
 

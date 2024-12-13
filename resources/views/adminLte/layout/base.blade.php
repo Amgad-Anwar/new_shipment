@@ -22,7 +22,7 @@
         @php 
             $model = App\Models\Settings::where('group', 'general')->where('name','system_logo')->first();
         @endphp
-        <link rel="shortcut icon" href="{{ $model->getFirstMediaUrl('system_logo') ? $model->getFirstMediaUrl('system_logo') : asset('assets/lte/media/logos/favicon.png') }}" />
+        <link rel="shortcut icon" href="{{ $model->getFirstMediaUrl('system_logo') ? $model->getFirstMediaUrl('system_logo') : asset('logo.png') }}" />
 
         <!-- Google Font: Source Sans Pro -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -94,7 +94,7 @@
                 $system_logo = App\Models\Settings::where('group', 'general')->where('name','system_logo')->first();
             @endphp
             <div class="preloader flex-column justify-content-center align-items-center">
-                <img class="animation__shake" src="{{ $model->getFirstMediaUrl('loading_logo') ? $model->getFirstMediaUrl('loading_logo') : ( $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('assets/lte/cargo-logo-small-h38.svg') ) }}" alt="Logo" height="60" width="60">
+                <img class="animation__shake" src="{{ $model->getFirstMediaUrl('loading_logo') ? $model->getFirstMediaUrl('loading_logo') : ( $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('logo.png') ) }}" alt="Logo" height="60" width="60">
             </div>
 
             <!-- Navbar -->

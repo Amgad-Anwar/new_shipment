@@ -1317,6 +1317,8 @@ class ShipmentController extends Controller
                 $tax_for_exrea = ((ShipmentSetting::getCost('def_tax_gram') * $shipping_cost_for_extra) / 100 );
 
                 $shipping_cost = $shipping_cost_first_one + $shipping_cost_for_extra;
+               // dd($shipping_cost_first_one ,$shipping_cost_for_extra  );
+
                 $tax = $tax_for_first_one + $tax_for_exrea;
 
             }else{

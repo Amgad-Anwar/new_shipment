@@ -29,7 +29,7 @@
                                 @php 
                                     $system_logo = App\Models\Settings::where('group', 'general')->where('name','system_logo')->first();
                                 @endphp
-                                <img alt="Logo" src="{{  $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('assets/lte/cargo-logo.svg') }}" class="logo" style="max-height: 90px;" />
+                                <img alt="Logo" src="{{  $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('logo.png') }}" class="logo" style="max-height: 90px;" />
                                 {{ __('cargo::view.INVOICE') }}
                             </h1>
                             <div class="px-0 d-flex flex-column align-items-md-end">

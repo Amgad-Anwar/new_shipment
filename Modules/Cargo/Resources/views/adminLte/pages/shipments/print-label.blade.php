@@ -18,7 +18,7 @@ $cash_payment = 'cash_payment';
                                             @php
                                                 $system_logo = App\Models\Settings::where('group', 'general')->where('name','system_logo')->first();
                                             @endphp
-                                            <img alt="Logo" src="{{  $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('assets/lte/cargo-logo.svg') }}" class="logo" style="max-height: 90px;" />
+                                            <img alt="Logo" src="{{  $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('logo.png') }}" class="logo" style="max-height: 90px;" />
                                         </td>
                                     </tr>
                                 </table>
@@ -176,7 +176,7 @@ $cash_payment = 'cash_payment';
                                             @php
                                                 $system_logo = App\Models\Settings::where('group', 'general')->where('name','system_logo')->first();
                                             @endphp
-                                            <img alt="Logo" src="{{  $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('assets/lte/cargo-logo.svg') }}" class="logo" style="max-height: 90px;" />
+                                            <img alt="Logo" src="{{  $system_logo->getFirstMediaUrl('system_logo') ? $system_logo->getFirstMediaUrl('system_logo') : asset('logo.png') }}" class="logo" style="max-height: 90px;" />
                                         </td>
                                     </tr>
                                 </table>

@@ -21,17 +21,31 @@
 
 
 @if(auth()->user()->can('done-missions') || $user_role == $admin || $user_role == $branch || $user_role == $driver )
-    @if($model->status_id == Modules\Cargo\Entities\Mission::RECIVED_STATUS)
 
-        @if($model->getRawOriginal('type') == Modules\Cargo\Entities\Mission::RETURN_TYPE || $model->getRawOriginal('type') == Modules\Cargo\Entities\Mission::SUPPLY_TYPE)
+    @if($model->status_id == Modules\Cargo\Entities\Mission::RECIVED_STATUS)
+ 
+        @if($model->getRawOriginal('type') == Modules\Cargo\Entities\Mission::RETURN_TYPE || $model->getRawOriginal('type') == Modules\Cargo\Entities\Mission::SUPPLY_TYPE   )
             <a class="btn btn-success btn-sm" data-url="{{route('admin.missions.action.confirm_amount',['mission_id'=>$model->id])}}" data-action="POST" onclick="openAjexedModel(this,event)" href="#" title="{{__('cargo::view.confirm_mission_done') }}">
                 <i class="fa fa-check"></i> {{__('cargo::view.confirm_mission_done') }}
             </a>
-        @elseif($user_role != $driver && $model->getRawOriginal('type') == Modules\Cargo\Entities\Mission::PICKUP_TYPE || $model->getRawOriginal('type') == Modules\Cargo\Entities\Mission::TRANSFER_TYPE)
+          
+        @elseif($user_role != $driver && $model->getRawOriginal('type') == Modules\Cargo\Entities\Mission::PICKUP_TYPE || $model->getRawOriginal('type') == Modules\Cargo\Entities\Mission::TRANSFER_TYPE  ||  $model->getRawOriginal('type') == Modules\Cargo\Entities\Mission::DELIVERY_TYPE )
             <a class="btn btn-success btn-sm" data-url="{{route('admin.missions.action.confirm_amount',['mission_id'=>$model->id])}}" data-action="POST" onclick="openAjexedModel(this,event)" href="#" title="{{__('cargo::view.confirm_mission_done') }}">
                 <i class="fa fa-check"></i> {{__('cargo::view.confirm_mission_done') }}
             </a>
+          
         @endif
+        @php
+        // ||  $model->getRawOriginal('type') == Modules\Cargo\Entities\Mission::DELIVERY_TYPE
+        // dd(
+        //     "test" 
+        //     ,  $model->getRawOriginal('type') 
+        //     ,  Modules\Cargo\Entities\Mission::RETURN_TYPE  
+        //     ,  Modules\Cargo\Entities\Mission::PICKUP_TYPE 
+        //     ,  Modules\Cargo\Entities\Mission::SUPPLY_TYPE  
+        //     ,  Modules\Cargo\Entities\Mission::TRANSFER_TYPE  
+        // ) ;
+        @endphp
 
     @endif
 @endif

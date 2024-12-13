@@ -22,7 +22,7 @@ $buttonBgColor = array_key_exists('button_bg_color', $data) && $data['button_bg_
                     <div class="card text-center bg-light">
                         <header class="header">
                             <div class="logo">
-                                <img src="{{ theme_setting_image($section->id, 'section_1_logo') != '' ? theme_setting_image($section->id, 'section_1_logo') : get_general_setting('website_logo', asset('assets/lte/cargo-logo-small-h38.svg')) }}" alt="logo" />
+                                <img src="{{ theme_setting_image($section->id, 'section_1_logo') != '' ? theme_setting_image($section->id, 'section_1_logo') : get_general_setting('website_logo', asset('logo.png')) }}" alt="logo" />
                             </div>
                             <div class="avatar">
                                 <img src="{{ theme_setting_image($section->id, 'section_1_avatar') != '' ? theme_setting_image($section->id, 'section_1_avatar') : get_general_setting('website_logo', asset('themes/goshippo/assets/images/greenbelly-meals.jpg')) }}" alt="avatar" />
@@ -47,7 +47,7 @@ $buttonBgColor = array_key_exists('button_bg_color', $data) && $data['button_bg_
                     <div class="card text-center bg-light">
                         <header class="header">
                             <div class="logo">
-                                <img src="{{ theme_setting_image($section->id, 'section_2_logo') != '' ? theme_setting_image($section->id, 'section_2_logo') : get_general_setting('website_logo', asset('assets/lte/cargo-logo-small-h38.svg')) }}"
+                                <img src="{{ theme_setting_image($section->id, 'section_2_logo') != '' ? theme_setting_image($section->id, 'section_2_logo') : get_general_setting('website_logo', asset('logo.png')) }}"
                                     alt="logo" />
                             </div>
                             <div class="avatar">
@@ -75,7 +75,7 @@ $buttonBgColor = array_key_exists('button_bg_color', $data) && $data['button_bg_
                     <div class="card text-center bg-light">
                         <header class="header">
                             <div class="logo">
-                                <img src="{{ theme_setting_image($section->id, 'section_3_logo') != '' ? theme_setting_image($section->id, 'section_3_logo') : get_general_setting('website_logo', asset('assets/lte/cargo-logo-small-h38.svg')) }}" alt="logo" />
+                                <img src="{{ theme_setting_image($section->id, 'section_3_logo') != '' ? theme_setting_image($section->id, 'section_3_logo') : get_general_setting('website_logo', asset('logo.png')) }}" alt="logo" />
                             </div>
                             <div class="avatar">
                                 <img src="{{ theme_setting_image($section->id, 'section_3_avatar') != '' ? theme_setting_image($section->id, 'section_3_avatar') : get_general_setting('website_logo', asset('themes/goshippo/assets/images/greenbelly-meals.jpg')) }}" alt="avatar" />
@@ -103,7 +103,7 @@ $buttonBgColor = array_key_exists('button_bg_color', $data) && $data['button_bg_
                     <div class="card text-center bg-light">
                         <header class="header">
                             <div class="logo">
-                                <img src="{{ theme_setting_image($section->id, 'section_4_logo') != '' ? theme_setting_image($section->id, 'section_4_logo') : get_general_setting('website_logo', asset('assets/lte/cargo-logo-small-h38.svg')) }}"
+                                <img src="{{ theme_setting_image($section->id, 'section_4_logo') != '' ? theme_setting_image($section->id, 'section_4_logo') : get_general_setting('website_logo', asset('logo.png')) }}"
                                     alt="logo" />
                             </div>
                             <div class="avatar">
@@ -133,7 +133,7 @@ $buttonBgColor = array_key_exists('button_bg_color', $data) && $data['button_bg_
                     <div class="card text-center bg-light">
                         <header class="header">
                             <div class="logo">
-                                <img src="{{ theme_setting_image($section->id, 'section_5_logo') != '' ? theme_setting_image($section->id, 'section_5_logo') : get_general_setting('website_logo', asset('assets/lte/cargo-logo-small-h38.svg')) }}"
+                                <img src="{{ theme_setting_image($section->id, 'section_5_logo') != '' ? theme_setting_image($section->id, 'section_5_logo') : get_general_setting('website_logo', asset('logo.png')) }}"
                                     alt="logo" />
                             </div>
                             <div class="avatar">

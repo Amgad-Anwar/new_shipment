@@ -11,7 +11,7 @@
             <div class="d-flex justify-content-center align-items-center">
                 <div  class="logo site--logo">
                     <a href="{{ fr_route('home') }}" rel="home" title="{{ config('app.name') }}">
-                        <img src="{{ theme_setting_image('header','header_logo') != '' ? theme_setting_image('header','header_logo') : asset('assets/lte/cargo-logo-small-h38.svg') }}" alt="{{ config('app.name') }}" />
+                        <img src="{{ theme_setting_image('header','header_logo') != '' ? theme_setting_image('header','header_logo') : asset('logo.png') }}" alt="{{ config('app.name') }}" />
                     </a>
                 </div>
 
@@ -95,7 +95,7 @@
 <!-- Mobile Menu -->
 <nav aria-label="primary mobile" class="drawer d-lg-none">
     <header class="header d-lg-none d-flex justify-content-between align-items-center">
-      <img src="{{ theme_setting_image('header','header_logo') != '' ? theme_setting_image('header','header_logo') : asset('assets/lte/cargo-logo-small-h38.svg') }}" alt="{{ config('app.name') }}" />
+      <img src="{{ theme_setting_image('header','header_logo') != '' ? theme_setting_image('header','header_logo') : asset('logo.png') }}" alt="{{ config('app.name') }}" />
       <button id="nav-close" class="btn p-0 stop-propagation">
         <i data-feather="x"></i>
       </button>
