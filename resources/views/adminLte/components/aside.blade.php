@@ -111,7 +111,7 @@
                         @endif
 
 
-                        @can('manage-notifications-setting')
+                        {{-- @can('manage-notifications-setting')
                             <li class="nav-item">
                                 <a href="{{ fr_route('admin.settings.notifications') }}"
                                     class="nav-link {{ areActiveRoutes(['admin.settings.notifications']) }}">
@@ -119,9 +119,9 @@
                                     <p>@lang('view.notifications_settings')</p>
                                 </a>
                             </li>
-                        @endcan
+                        @endcan --}}
 
-                        @can('manage-google-setting')
+                        {{-- @can('manage-google-setting')
                             <li class="nav-item">
                                 <a href="{{ fr_route('admin.settings.google') }}"
                                     class="nav-link {{ areActiveRoutes(['admin.settings.google']) }}">
@@ -129,8 +129,8 @@
                                     <p>@lang('view.google_settings')</p>
                                 </a>
                             </li>
-                        @endcan
-
+                        @endcan --}}
+                        {{-- 
                         @can('manage-theme-setting')
                             <li class="nav-item">
                                 <a href="{{ fr_route('default-theme.edit') }}"
@@ -147,10 +147,10 @@
                                     <p>@lang('view.theme_setting')</p>
                                 </a>
                             </li>
-                        @endcan
+                        @endcan --}}
 
 
-                        @if (auth()->user()->can('update-system') || auth()->user()->role == 1)
+                        {{-- @if (auth()->user()->can('update-system') || auth()->user()->role == 1)
                             <li class="nav-item">
                                 <a href="{{ fr_route('backup.database') }}"
                                     class="nav-link {{ active_route('backup.database') }}  {{ areActiveRoutes(['backup.database']) }}">
@@ -160,7 +160,7 @@
                                     </p>
                                 </a>
                             </li>
-                        @endif
+                        @endif --}}
                     </ul>
 
                 </li>
@@ -177,7 +177,7 @@
                     </li>
                 @endif--}}
 
-                @if (auth()->user()->can('update-system') || auth()->user()->role == 1)
+                {{-- @if (auth()->user()->can('update-system') || auth()->user()->role == 1)
                     <li class="nav-item">
                         <a href="{{ fr_route('system.update') }}"
                             class="nav-link {{ areActiveRoutes(['system.update']) }}">
@@ -187,8 +187,8 @@
                             </p>
                         </a>
                     </li>
-                @endif
-                @if (auth()->user()->role == 1)
+                @endif --}}
+                {{-- @if (auth()->user()->role == 1)
                     <li class="nav-item">
                         <a href="{{ fr_route('system.support') }}"
                             class="nav-link {{ areActiveRoutes(['system.support']) }}">
@@ -198,7 +198,7 @@
                             </p>
                         </a>
                     </li>
-                @endif
+                @endif --}}
 
 
 

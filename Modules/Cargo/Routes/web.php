@@ -269,6 +269,16 @@ if (\Illuminate\Support\Facades\Schema::hasTable('translations') && check_module
             // Area Routes
             Route::delete('/areas-multi-destroy', 'AreaController@multiDestroy')->name('areas.multi-destroy');
             Route::resource('areas','AreaController');
+            Route::resource('drivers_prices','DriversPriceController');
+
+
+            Route::get('/drivers_prices_layer/{drivers_price_id}','DriversPriceLayerController@index')->name('drivers_prices_layer.index');
+            Route::get('/drivers_prices_layer/{drivers_price_id}/create','DriversPriceLayerController@create')->name('drivers_prices_layer.create');
+            Route::post('/drivers_prices_layer/{drivers_price_id}/store','DriversPriceLayerController@store')->name('drivers_prices_layer.store');
+            Route::get('/drivers_prices_layer/{drivers_price_id}/edit/{id}','DriversPriceLayerController@edit')->name('drivers_prices_layer.edit');
+            Route::put('/drivers_prices_layer/{drivers_price_id}/update/{id}','DriversPriceLayerController@update')->name('drivers_prices_layer.update');
+            Route::delete('/drivers_prices_layer/{drivers_price_id}/delete/{id}','DriversPriceLayerController@destroy')->name('drivers_prices_layer.destroy');
+
 
             // Staff Routes
             Route::delete('/staffs-multi-destroy', 'StaffController@multiDestroy')->name('staffs.multi-destroy');
@@ -557,6 +567,9 @@ if (\Illuminate\Support\Facades\Schema::hasTable('translations') && check_module
         // Area Routes
         Route::delete('/areas-multi-destroy', 'AreaController@multiDestroy')->name('areas.multi-destroy');
         Route::resource('areas','AreaController');
+
+        Route::resource('drivers_prices','DriversPriceController');
+
 
         // Staff Routes
         Route::delete('/staffs-multi-destroy', 'StaffController@multiDestroy')->name('staffs.multi-destroy');

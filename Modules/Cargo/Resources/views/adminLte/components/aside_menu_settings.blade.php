@@ -24,8 +24,8 @@ $admin = 1;
     </li>
 @endif
 
-{{--
-@if (auth()->user()->can('manage-delivery-time') || $user_role == $admin)
+
+{{-- @if (auth()->user()->can('manage-delivery-time') || $user_role == $admin)
     <li class="nav-item {{ areActiveRoutes(['deliveryTime.index'], 'menu-is-opening menu-open active') }}">
         <a href="{{ fr_route('deliveryTime.index') }}"
             class="nav-link  {{ areActiveRoutes(['deliveryTime.index'], 'menu-is-opening menu-open active') }}">
@@ -33,8 +33,8 @@ $admin = 1;
             <p>{{ __('cargo::view.delivery_time') }}</p>
         </a>
     </li>
-@endif
---}}
+@endif --}}
+
 
 @if (auth()->user()->can('manage-packages') || $user_role == $admin)
     <li class="nav-item {{ areActiveRoutes(['packages.index'], 'menu-is-opening menu-open active') }}">

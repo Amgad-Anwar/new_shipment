@@ -278,7 +278,7 @@ $driver = 5;
 
 
 
-@if (auth()->user()->can('manage-branches') ||
+{{-- @if (auth()->user()->can('manage-branches') ||
     auth()->user()->can('manage-customers') ||
     auth()->user()->can('manage-drivers') ||
     $user_role == $admin ||
@@ -294,7 +294,13 @@ $driver = 5;
             </p>
         </a>
 
-        <ul class="nav nav-treeview">
+        <ul class="nav nav-treeview"> --}}
+
+            @if (auth()->user()->can('manage-branches') ||
+            auth()->user()->can('manage-customers') ||
+            auth()->user()->can('manage-drivers') ||
+            $user_role == $admin ||
+            $user_role == $branch)
 
             <!-- Branch Menu -->
             @if (auth()->user()->can('manage-branches') || $user_role == $admin)
@@ -339,8 +345,8 @@ $driver = 5;
 
             <!-- Customer Menu -->
             @if (auth()->user()->can('manage-customers') ||
-    $user_role == $admin ||
-    $user_role == $branch)
+                $user_role == $admin ||
+                $user_role == $branch)
 
                 <li
                     class="nav-item {{ active_uri('clients', ['class_name' => 'show']) }} {{ areActiveRoutes(['clients.index', 'clients.create', 'clients'], 'menu-is-opening menu-open active') }}">
@@ -357,8 +363,8 @@ $driver = 5;
 
                         <!-- Customers list -->
                         @if (auth()->user()->can('view-customers') ||
-    $user_role == $admin ||
-    $user_role == $branch)
+                        $user_role == $admin ||
+                        $user_role == $branch)
                             <li class="nav-item">
                                 <a href="{{ fr_route('clients.index') }}"
                                     class="nav-link {{ areActiveRoutes(['clients.index']) }}">
@@ -370,8 +376,8 @@ $driver = 5;
 
                         <!-- Create new customer -->
                         @if (auth()->user()->can('create-customers') ||
-    $user_role == $admin ||
-    $user_role == $branch)
+                        $user_role == $admin ||
+                        $user_role == $branch)
                             <li class="nav-item">
                                 <a href="{{ fr_route('clients.create') }}"
                                     class="nav-link {{ areActiveRoutes(['clients.create']) }}">
@@ -387,8 +393,8 @@ $driver = 5;
 
             <!-- Driver Menu -->
             @if (auth()->user()->can('manage-drivers') ||
-    $user_role == $admin ||
-    $user_role == $branch)
+                $user_role == $admin ||
+                $user_role == $branch)
 
                 <li
                     class="nav-item {{ active_uri('drivers', ['class_name' => 'show']) }}  {{ areActiveRoutes(['drivers.index', 'drivers.create', 'drivers'], 'menu-is-opening menu-open active') }}">
@@ -402,10 +408,22 @@ $driver = 5;
                     </a>
                     <ul class="nav nav-treeview">
 
+                        @if (auth()->user()->can('view-drivers') ||
+                        $user_role == $admin ||
+                        $user_role == $branch)
+                        <li class="nav-item">
+                            <a href="{{ fr_route('drivers_prices.index') }}"
+                                class="nav-link {{ areActiveRoutes(['drivers_prices.index']) }}">
+                                <i class="fas fa-list fa-fw"></i>
+                                <p>{{ __('Driver Prices') }}</p>
+                            </a>
+                        </li>
+                        @endif
+
                         <!-- Driver list -->
                         @if (auth()->user()->can('view-drivers') ||
-    $user_role == $admin ||
-    $user_role == $branch)
+                            $user_role == $admin ||
+                            $user_role == $branch)
                             <li class="nav-item">
                                 <a href="{{ fr_route('drivers.index') }}"
                                     class="nav-link {{ areActiveRoutes(['drivers.index']) }}">
@@ -417,8 +435,8 @@ $driver = 5;
 
                         <!-- Create new driver -->
                         @if (auth()->user()->can('create-drivers') ||
-    $user_role == $admin ||
-    $user_role == $branch)
+                        $user_role == $admin ||
+                        $user_role == $branch)
                             <li class="nav-item">
                                 <a href="{{ fr_route('drivers.create') }}"
                                     class="nav-link {{ areActiveRoutes(['drivers.create']) }}">
@@ -432,6 +450,8 @@ $driver = 5;
                 </li>
             @endif
 
-        </ul>
+
+            @endif
+        {{-- </ul>
     </li>
-@endif
+@endif --}}

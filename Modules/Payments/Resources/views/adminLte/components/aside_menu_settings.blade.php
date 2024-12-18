@@ -2,7 +2,7 @@
 $user_role = auth()->user()->role;
 $admin = 1;
 @endphp
-
+{{-- 
 @if (auth()->user()->can('payments-settings'))
     <li class="nav-item">
         <a href="{{ fr_route('payments.index') }}" class="nav-link {{ areActiveRoutes(['payments.index']) }}">
@@ -10,4 +10,4 @@ $admin = 1;
             <p>{{ __('cargo::view.payments_settings') }}</p>
         </a>
     </li>
-@endif
+@endif --}}
